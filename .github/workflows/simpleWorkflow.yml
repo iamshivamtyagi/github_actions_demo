@@ -1,0 +1,19 @@
+name: workflow overview
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  a_basic_job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: my first step to execute
+        id: stepId
+        run: echo "This is the first step executing of the job"
+      - name: step with python print command
+        id: shellExecuteStep
+        shell: python
+        run: print("Hello From Python Language")
