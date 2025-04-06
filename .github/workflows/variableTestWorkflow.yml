@@ -1,4 +1,4 @@
-name: variables & secrets workflow test
+name: variables and secrets workflow test
 
 env:
   WF_VAR: "Workflow Level Custom Variable Example"
