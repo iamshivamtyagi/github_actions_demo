@@ -1,0 +1,27 @@
+name: variables & secrets workflow test
+
+env:
+  WF_VAR: "Workflow Level Custom Variable Example"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Job to Test Variables & Secrets:
+    env:
+      JOB_VAR: "Job Level Custom Variable Example"
+    name: Job to check variable and secrets working
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Variables & Secrets 
+        id: stepVar
+        env:
+          STEP_VAR: "Step Level Custom Variable Example"
+        run: |
+         echo ${{github.actor}}
+         echo $GITHUB_JOB
+         echo $WF_VAR
+         echo $JOB_VAR
+         echo $STEP_VAR
+         echo ${{vars.CONF_VAR}}
+         echo ${{secrets.A_SECRET}}
