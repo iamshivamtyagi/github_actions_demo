@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Job to Test Variables and Secrets:
+  Job_to_Test_Variables_and_Secrets:
     env:
       JOB_VAR: "Job Level Custom Variable Example"
     name: Job to check variable and secrets working
